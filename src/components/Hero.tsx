@@ -1,7 +1,11 @@
 import { business } from '../data/site'
 
-export function Hero() {
-  return <section className="hero" id="agency" aria-labelledby="hero-title">
+type HeroProps = {
+  roomToneOn: boolean
+}
+
+export function Hero({ roomToneOn }: HeroProps) {
+  return <section className={`hero${roomToneOn ? ' hero--room-tone' : ''}`} id="agency" aria-labelledby="hero-title">
     <div className="rain" aria-hidden="true" />
     <div className="hero-lamp" aria-hidden="true" />
     <div className="hero-content">
